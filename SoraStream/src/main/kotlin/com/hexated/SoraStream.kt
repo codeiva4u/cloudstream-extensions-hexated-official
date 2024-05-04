@@ -79,51 +79,51 @@ open class SoraStream : TmdbProvider() {
         private const val apiKey = BuildConfig.TMDB_API
 
         /** ALL SOURCES */
-        const val twoEmbedAPI = "https://www.2embed.cc"
-        const val vidSrcAPI = "https://vidsrc.me"
-        const val dreamfilmAPI = "https://dreamfilmsw.net"
-        const val noverseAPI = "https://www.nollyverse.com"
-        const val filmxyAPI = "https://www.filmxy.vip"
-        const val kimcartoonAPI = "https://kimcartoon.li"
-        const val hianimeAPI = "https://hianime.to"
-        const val aniwaveAPI = "https://aniwave.to"
-        const val crunchyrollAPI = "https://beta-api.crunchyroll.com"
-        const val kissKhAPI = "https://kisskh.co"
-        const val lingAPI = "https://ling-online.net"
-        const val m4uhdAPI = "https://ww1.streamm4u.ws"
-        const val rStreamAPI = "https://remotestream.cc"
-        const val flixonAPI = "https://flixon.lol"
-        const val smashyStreamAPI = "https://embed.smashystream.com"
-        const val watchSomuchAPI = "https://watchsomuch.tv" // sub only
+        const val twoEmbedAPI = ""
+        const val vidSrcAPI = ""
+        const val dreamfilmAPI = ""
+        const val noverseAPI = ""
+        const val filmxyAPI = ""
+        const val kimcartoonAPI = ""
+        const val hianimeAPI = ""
+        const val aniwaveAPI = ""
+        const val crunchyrollAPI = ""
+        const val kissKhAPI = ""
+        const val lingAPI = ""
+        const val m4uhdAPI = ""
+        const val rStreamAPI = ""
+        const val flixonAPI = ""
+        const val smashyStreamAPI = ""
+        const val watchSomuchAPI = "" // sub only
         const val cinemaTvAPI = BuildConfig.CINEMATV_API
-        const val nineTvAPI = "https://moviesapi.club"
-        const val nowTvAPI = "https://myfilestorage.xyz"
-        const val gokuAPI = "https://goku.sx"
+        const val nineTvAPI = ""
+        const val nowTvAPI = ""
+        const val gokuAPI = ""
         const val zshowAPI = BuildConfig.ZSHOW_API
-        const val ridomoviesAPI = "https://ridomovies.tv"
-        const val emoviesAPI = "https://emovies.si"
-        const val multimoviesAPI = "https://multimovies.top"
-        const val multimovies2API = "https://multimovies.click"
-        const val netmoviesAPI = "https://netmovies.to"
-        const val allmovielandAPI = "https://allmovieland.fun"
-        const val doomoviesAPI = "https://doomovies.net"
-        const val vidsrctoAPI = "https://vidsrc.to"
-        const val dramadayAPI = "https://dramaday.me"
-        const val animetoshoAPI = "https://animetosho.org"
-        const val showflixAPI = "https://showflix.lol"
-        const val aoneroomAPI = "https://api3.aoneroom.com"
-        const val mMoviesAPI = "https://multimovies.uno"
-        const val watchCartoonAPI = "https://www1.watchcartoononline.bz"
-        const val moflixAPI = "https://moflix-stream.xyz"
-        const val zoechipAPI = "https://zoechip.org"
-        const val nepuAPI = "https://nepu.to"
-        const val fdMoviesAPI = "https://freedrivemovie.com"
-        const val uhdmoviesAPI = "https://uhdmovies.asia"
-        const val hdmovies4uAPI = "https://hdmovies4u.day"
-        const val vegaMoviesAPI = "https://vegamovies.ong"
-        const val dotmoviesAPI = "https://luxmovies.biz"
-        const val tvMoviesAPI = "https://www.tvseriesnmovies.com"
-        const val dahmerMoviesAPI = "https://odd-bird-1319.zwuhygoaqe.workers.dev"
+        const val ridomoviesAPI = ""
+        const val emoviesAPI = ""
+        const val multimoviesAPI = ""
+        const val multimovies2API = ""
+        const val netmoviesAPI = ""
+        const val allmovielandAPI = ""
+        const val doomoviesAPI = ""
+        const val vidsrctoAPI = ""
+        const val dramadayAPI = ""
+        const val animetoshoAPI = ""
+        const val showflixAPI = ""
+        const val aoneroomAPI = ""
+        const val mMoviesAPI = "https://multimovies.space"
+        const val watchCartoonAPI = ""
+        const val moflixAPI = ""
+        const val zoechipAPI = ""
+        const val nepuAPI = ""
+        const val fdMoviesAPI = ""
+        const val uhdmoviesAPI = ""
+        const val hdmovies4uAPI = "https://hdmovies4u.eu/"
+        const val vegaMoviesAPI = ""
+        const val dotmoviesAPI = ""
+        const val tvMoviesAPI = ""
+        const val dahmerMoviesAPI = ""
 
         fun getType(t: String?): TvType {
             return when (t) {
@@ -142,8 +142,8 @@ open class SoraStream : TmdbProvider() {
     }
 
     override val mainPage = mainPageOf(
-        "$tmdbAPI/trending/all/day?api_key=$apiKey&region=US" to "Trending",
-        "$tmdbAPI/movie/popular?api_key=$apiKey&region=US" to "Popular Movies",
+        "$tmdbAPI/genre/tv-channel?api_key=$apiKey&region=IN" to "TV Channels",
+        "$tmdbAPI/category/south-hindi-dubbed-720p?api_key=$apiKey&region=IN" to "South Movies",
         "$tmdbAPI/tv/popular?api_key=$apiKey&region=US&with_original_language=en" to "Popular TV Shows",
         "$tmdbAPI/tv/airing_today?api_key=$apiKey&region=US&with_original_language=en" to "Airing Today TV Shows",
         "$tmdbAPI/discover/tv?api_key=$apiKey&with_networks=213" to "Netflix",
